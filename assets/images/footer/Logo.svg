@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="151"
+   height="32"
+   viewBox="0 0 151 32"
+   fill="none"
+   version="1.1"
+   id="svg10043"
+   sodipodi:docname="Logo.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10047" />
+  <sodipodi:namedview
+     id="namedview10045"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="12.943332"
+     inkscape:cx="29.088337"
+     inkscape:cy="30.865313"
+     inkscape:window-width="841"
+     inkscape:window-height="2135"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10043" />
+  <mask
+     id="mask0_1311_530"
+     style="mask-type:alpha"
+     maskUnits="userSpaceOnUse"
+     x="0"
+     y="0"
+     width="33"
+     height="32">
+    <circle
+       cx="16.3693"
+       cy="16.2756"
+       r="15.6652"
+       fill="#FFD245"
+       id="circle10030" />
+  </mask>
+  <g
+     inkscape:export-ydpi="96"
+     inkscape:export-xdpi="96"
+     inkscape:export-filename="/home/comtom/Proyectos/TechSupport/logos/4.0/logo-horizontal-peq.png"
+     transform="matrix(0.26108985,0,0,0.26108985,-209.53047,-159.82812)"
+     style="fill:#ffffff;fill-opacity:1"
+     id="g91042">
+    <g
+       transform="translate(367.85872,-101.05842)"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="g91038">
+      <g
+         id="g91034"
+         transform="matrix(1.3204429,0,0,1.3204429,-138.33499,-259.87624)"
+         style="fill:#ffffff">
+        <path
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 464.03288,759.2307 -16.8737,2.25881 -12.18207,29.59198 19.15684,25.87735 50.29714,-6.88025 5.05135,-12.22928 -10.64519,-13.87138 -5.20649,12.99527 -32.39335,4.33636 -9.52456,-12.50317 z"
+           id="path91028"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccccc" />
+        <path
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 454.23769,788.30311 19.10725,-46.41424 32.12055,-4.20977 20.10889,26.08873 -6.50858,15.50877 -19.71936,-25.58337 -15.70439,2.26986 -12.47143,30.29489 8.54669,10.50323 -17.57368,2.37989 z"
+           id="path91030"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccccc" />
+        <path
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 474.21295,816.07996 10.90676,13.94337 18.58358,-2.48771 12.82067,-1.71625 12.59838,-30.45457 -30.47712,-39.51513 -13.6086,1.95245 -6.2033,15.14372 12.32379,-1.81849 20.6852,26.50106 -6.02701,14.34724 z"
+           id="path91032"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccccccc" />
+      </g>
+      <path
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 481.1086,809.00511 c 0.20556,0.2667 0.41112,0.53338 0.61668,0.80007"
+         id="path91036"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       style="fill:#ffffff;fill-opacity:1"
+       transform="matrix(1.1528608,0,0,1.1528608,499.07557,-220.06263)"
+       id="g91040" />
+  </g>
+  <text
+     id="text91046"
+     y="16.418537"
+     x="43.516384"
+     style="font-style:normal;font-weight:normal;font-size:11.1548px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.929563px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.1305px;line-height:1.25;font-family:'LEMON MILK';-inkscape-font-specification:'LEMON MILK';fill:#ffffff;fill-opacity:1;stroke-width:0.929563px"
+       id="tspan91044"
+       y="16.418537"
+       x="43.516384"
+       sodipodi:role="line">Comtom</tspan></text>
+  <text
+     id="text91050"
+     y="31.97541"
+     x="45.613544"
+     style="font-style:normal;font-weight:normal;font-size:8.94378px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.745315px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.1405px;line-height:1.25;font-family:'Walkway Bold';-inkscape-font-specification:'Walkway Bold, ';fill:#ffffff;fill-opacity:1;stroke-width:0.745315px"
+       id="tspan91048"
+       y="31.97541"
+       x="45.613544"
+       sodipodi:role="line">ENGINEERING</tspan></text>
+</svg>
