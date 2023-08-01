@@ -103,12 +103,12 @@ $(document).ready(function () {
 
         $.ajax({
             contentType: 'application/json',
-            data: {
+            data: JSON.stringify({
                 "name": $('#contact-name').val(),
                 "phone": "",
                 "email": $('#contact-email').val(),
                 "message": $('#contact-message').val(),
-            },
+            }),
             dataType: 'json',
             beforeSend: function (x) {
                 if (x && x.overrideMimeType) {
