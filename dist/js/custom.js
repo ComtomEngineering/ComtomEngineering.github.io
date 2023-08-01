@@ -110,11 +110,6 @@ $(document).ready(function () {
                 "message": $('#contact-message').val(),
             }),
             dataType: 'json',
-            beforeSend: function (x) {
-                if (x && x.overrideMimeType) {
-                    x.overrideMimeType("application/json;charset=UTF-8");
-                }
-            },
             type: 'POST',
             url: 'https://comtomengineering-serverless.vercel.app/api/contact'
         }).done(function () {
