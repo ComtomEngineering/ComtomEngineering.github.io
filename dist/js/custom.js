@@ -86,10 +86,13 @@ $(document).ready(function () {
     });
 
 
-    $('#button-register').on("click", function (e) {
-        e.preventDefault();
-
-        // TODO: validate email
+    function send_form_register() {
+        // validate data
+        var email = $('#subscription-email').val();
+        if (email == "" | !email.includes("@")) {
+            $('#subscribe-failed').modal('show');
+            return
+        }
 
         // TODO: disable button
         // TODO: show spinner
@@ -97,7 +100,7 @@ $(document).ready(function () {
         $.ajax({
             contentType: 'application/json',
             data: JSON.stringify({
-                "email": $('#subscription-email').val()
+                "email": email
             }),
             dataType: 'json',
             type: 'POST',
@@ -112,13 +115,40 @@ $(document).ready(function () {
             // TODO: enable button
             // TODO: hide spinner
         });
+    }
+
+
+    $('#register-form').on('submit', function (e) {
+        e.preventDefault();
+
+        send_form_register();
+    });
+
+    $('#register-btn').on('click', function (e) {
+        e.preventDefault();
+
+        send_form_register();
     });
 
 
-    $('#contact-form').on('submit', function (e) {
-        e.preventDefault();
 
-        // TODO: validate data
+    function send_form_contact() {
+        // validate data
+        var name = $('#contact-name').val();
+        var email = $('#contact-email').val();
+        var message = $('#contact-message').val();
+        if (email == "" | !email.includes("@")) {
+            $('#contact-failed').modal('show');
+            return
+        }
+        if (message == "") {
+            $('#contact-failed').modal('show');
+            return
+        }
+        if (name == "") {
+            $('#contact-failed').modal('show');
+            return
+        }
 
         // TODO: disable button
         // TODO: show spinner
@@ -126,24 +156,38 @@ $(document).ready(function () {
         $.ajax({
             contentType: 'application/json',
             data: JSON.stringify({
-                "name": $('#contact-name').val(),
+                "name": name,
                 "phone": "5555555",
-                "email": $('#contact-email').val(),
-                "message": $('#contact-message').val(),
+                "email": email,
+                "message": message,
             }),
             dataType: 'json',
             type: 'POST',
             url: 'https://comtomengineering-serverless.vercel.app/api/contact',
             success: function (response) {
                 $('#contact-success').modal('show');
-            },
-            error: function (response) {
-                $('#contact-fail').modal('show');
             }
+        }).done(function () {
+            $('#contact-success').modal('show');
+        }).fail(function () {
+            $('#contact-failed').modal('show');
         }).always(function () {
             // TODO: enable button
             // TODO: hide spinner
         });
+    }
+
+    $('#contact-form').on('submit', function (e) {
+        e.preventDefault();
+
+        send_form_contact();
+    });
+
+
+    $('#contact-btn').on('click', function (e) {
+        e.preventDefault();
+
+        send_form_contact();
     });
 
     $(window).scroll(function () {

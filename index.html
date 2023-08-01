@@ -640,22 +640,22 @@
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label class="form-label text-white fs-7 mb-3">Full Name</label>
-                                    <input id="contact-name" type="text" class="form-control border-0"
-                                        placeholder="Enter your name">
+                                    <input id="contact-name" type="text" required="required" pattern="[A-Za-z0-9]{1,20}"
+                                        class="form-control border-0" placeholder="Enter your name">
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="form-group">
                                     <label class="form-label text-white fs-7 mb-3">Email address</label>
-                                    <input id="contact-email" type="email" class="form-control border-0"
+                                    <input id="contact-email" type="email" required class="form-control border-0"
                                         placeholder="Enter your email address">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label text-white fs-7 mb-3">Inquiry</label>
-                                    <textarea id="contact-message" class="form-control border-0"></textarea>
-
+                                    <textarea id="contact-message" type="text" required="required"
+                                        pattern="[A-Za-z0-9]{1,20}" class="form-control border-0"></textarea>
                                 </div>
                             </div>
 
@@ -668,8 +668,8 @@
                                     class="text-warning text-decoration-none">terms and conditions of use.</a>
                             </div>
                             <div class="col-12">
-                                <button
-                                    class="btn btn-warning btn-hover-secondary text-capitalize mt-2 w-auto contact-btn">Contact
+                                <button class="btn btn-warning btn-hover-secondary text-capitalize mt-2 w-auto"
+                                    id="contact-btn" type="submit">Contact
                                     Us</button>
                             </div>
                         </div>
@@ -748,14 +748,13 @@
                         <h5 class="text-white">Subscribe</h5>
                         <p class="blue-light fw-500">Subscribe to get the latest news form us
                         </p>
-                        <form>
+                        <form id="register-form">
                             <div class="input-group">
                                 <input id="subscription-email" type="email" class="form-control br-15"
-                                    placeholder="Enter email address" aria-label="Enter email address"
-                                    aria-describedby="button-addon2">
+                                    placeholder="Enter email address" required aria-label="Enter email address">
                                 <button
                                     class="btn btn-warning btn-hover-secondary ms-xxl-2 ms-xl-2 ls-lg-0 ms-md-0 ms-sm-0 ms-0"
-                                    type="button" id="button-register">Register</button>
+                                    type="submit" id="register-btn">Register</button>
                             </div>
                         </form>
                     </div>
