@@ -89,6 +89,8 @@ $(document).ready(function () {
     $('#button-register').on("click", function () {
         $('#subscribed').modal('show');
 
+        //input class: subscription-email
+
         // if fails:
         //$('#subscribe-failed').modal('show');
     });
@@ -96,11 +98,29 @@ $(document).ready(function () {
 
     $('#contact-form').on('submit', function (e) {
         e.preventDefault();
+        // TODO: disable button
+        // TODO: show spinner
 
-        $('#contact-success').modal('show');
-
-        // if fails:
-        // $('#contact-fail').modal('show');
+        $.ajax({
+            contentType: 'application/json',
+            data: {
+                "name": $('#contact-name').val(),
+                "phone": "",
+                "email": $('#contact-email').val(),
+                "message": $('#contact-message').val(),
+            },
+            dataType: 'json',
+            // processData: false,
+            type: 'POST',
+            url: 'https://comtomengineering-serverless.vercel.app/api/contact'
+        }).done(function () {
+            $('#contact-success').modal('show');
+        }).fail(function () {
+            $('#contact-fail').modal('show');
+        }).always(function () {
+            // TODO: enable button
+            // TODO: hide spinner
+        });
     });
 
     $(window).scroll(function () {
@@ -116,8 +136,6 @@ $(document).ready(function () {
         return new Date().getFullYear();
     }
     document.onload = document.getElementById("autodate").innerHTML = + newDate();
-
-
 
 });
 
