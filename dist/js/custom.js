@@ -86,7 +86,11 @@ $(document).ready(function () {
     });
 
 
-    $('#button-register').on("click", function () {
+    $('#button-register').on("click", function (e) {
+        e.preventDefault();
+
+        // TODO: validate email
+
         // TODO: disable button
         // TODO: show spinner
 
@@ -113,6 +117,9 @@ $(document).ready(function () {
 
     $('#contact-form').on('submit', function (e) {
         e.preventDefault();
+
+        // TODO: validate data
+
         // TODO: disable button
         // TODO: show spinner
 
