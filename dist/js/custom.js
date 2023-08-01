@@ -110,7 +110,11 @@ $(document).ready(function () {
                 "message": $('#contact-message').val(),
             },
             dataType: 'json',
-            // processData: false,
+            beforeSend: function (x) {
+                if (x && x.overrideMimeType) {
+                    x.overrideMimeType("application/json;charset=UTF-8");
+                }
+            },
             type: 'POST',
             url: 'https://comtomengineering-serverless.vercel.app/api/contact'
         }).done(function () {
@@ -138,4 +142,3 @@ $(document).ready(function () {
     document.onload = document.getElementById("autodate").innerHTML = + newDate();
 
 });
-
