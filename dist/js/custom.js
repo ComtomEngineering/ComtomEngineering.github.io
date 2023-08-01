@@ -105,7 +105,7 @@ $(document).ready(function () {
             contentType: 'application/json',
             data: JSON.stringify({
                 "name": $('#contact-name').val(),
-                "phone": "",
+                "phone": "5555555",
                 "email": $('#contact-email').val(),
                 "message": $('#contact-message').val(),
             }),
