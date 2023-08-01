@@ -87,12 +87,27 @@ $(document).ready(function () {
 
 
     $('#button-register').on("click", function () {
-        $('#subscribed').modal('show');
+        // TODO: disable button
+        // TODO: show spinner
 
-        //input class: subscription-email
-
-        // if fails:
-        //$('#subscribe-failed').modal('show');
+        $.ajax({
+            contentType: 'application/json',
+            data: JSON.stringify({
+                "email": $('#subscription-email').val()
+            }),
+            dataType: 'json',
+            type: 'POST',
+            url: 'https://comtomengineering-serverless.vercel.app/api/subscription',
+            success: function () {
+                $('#subscribed').modal('show');
+            },
+            error: function () {
+                $('#subscribe-failed').modal('show');
+            },
+        }).always(function () {
+            // TODO: enable button
+            // TODO: hide spinner
+        });
     });
 
 
@@ -111,11 +126,13 @@ $(document).ready(function () {
             }),
             dataType: 'json',
             type: 'POST',
-            url: 'https://comtomengineering-serverless.vercel.app/api/contact'
-        }).done(function () {
-            $('#contact-success').modal('show');
-        }).fail(function () {
-            $('#contact-fail').modal('show');
+            url: 'https://comtomengineering-serverless.vercel.app/api/contact',
+            success: function (response) {
+                $('#contact-success').modal('show');
+            },
+            error: function (response) {
+                $('#contact-fail').modal('show');
+            }
         }).always(function () {
             // TODO: enable button
             // TODO: hide spinner
