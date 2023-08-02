@@ -150,9 +150,10 @@ $(document).ready(function () {
             return
         }
 
-        // TODO: disable button
-        // TODO: show spinner
+        // disable button & show spinner
+        $('#contact-btn').addClass('disabled');
 
+        console.log('sending request...')
         $.ajax({
             contentType: 'application/json',
             data: JSON.stringify({
@@ -168,12 +169,15 @@ $(document).ready(function () {
                 $('#contact-success').modal('show');
             }
         }).done(function () {
+            console.log('message sent')
             $('#contact-success').modal('show');
         }).fail(function () {
+            console.log('failed to send message')
             $('#contact-failed').modal('show');
         }).always(function () {
-            // TODO: enable button
-            // TODO: hide spinner
+            // enable button & hide spinner
+            console.log('restoring state')
+            $('#contact-btn').removeClass('disabled');
         });
     }
 
