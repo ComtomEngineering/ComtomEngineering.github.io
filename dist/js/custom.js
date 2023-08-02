@@ -94,9 +94,8 @@ $(document).ready(function () {
             return
         }
 
-        // TODO: disable button
-        // TODO: show spinner
-
+        // disable button & show spinner
+        $('#register-btn').addClass('disabled');
         $.ajax({
             contentType: 'application/json',
             data: JSON.stringify({
@@ -104,16 +103,18 @@ $(document).ready(function () {
             }),
             dataType: 'json',
             type: 'POST',
-            url: 'https://comtomengineering-serverless.vercel.app/api/subscription',
-            success: function () {
-                $('#subscribed').modal('show');
-            },
-            error: function () {
-                $('#subscribe-failed').modal('show');
-            },
+            url: 'https://comtomengineering-serverless.vercel.app/api/subscription'
+        }).done(function () {
+            console.log('subscribed')
+            $('#subscribed').modal('show');
+            $('#subscription-email').val('');
+        }).fail(function () {
+            console.log('failed to subscribe')
+            $('#subscribe-failed').modal('show');
         }).always(function () {
-            // TODO: enable button
-            // TODO: hide spinner
+            // enable button & hide spinner
+            console.log('restoring state')
+            $('#subscribe-failed').removeClass('disabled');
         });
     }
 
@@ -164,13 +165,14 @@ $(document).ready(function () {
             }),
             dataType: 'json',
             type: 'POST',
-            url: 'https://comtomengineering-serverless.vercel.app/api/contact',
-            success: function (response) {
-                $('#contact-success').modal('show');
-            }
+            url: 'https://comtomengineering-serverless.vercel.app/api/contact'
         }).done(function () {
             console.log('message sent')
             $('#contact-success').modal('show');
+
+            $('#contact-name').val('');
+            $('#contact-email').val('');
+            $('#contact-message').val('');
         }).fail(function () {
             console.log('failed to send message')
             $('#contact-failed').modal('show');
