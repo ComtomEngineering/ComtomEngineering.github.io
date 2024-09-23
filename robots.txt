@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+Disallow: /login
+Disallow: /cgi-bin
+Disallow: /api
+Sitemap: https://www.comtom.engineering/sitemap.xml
