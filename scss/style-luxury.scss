@@ -1,0 +1,642 @@
+// Luxury Theme Stylesheet - Comtom Engineering Redesign
+// Modern, premium aesthetic with charcoal background and electric blue accents
+
+@import 'variables-luxury';
+@import 'bootstrap/bootstrap';
+
+// Global Styles
+body {
+  font-family: $font-family-sans-serif;
+  background: $body-bg;
+  color: $body-color;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: 700;
+  color: $white;
+  line-height: 1.2;
+}
+
+a {
+  transition: $transition-base;
+}
+
+// Custom Scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $scrollbar-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-thumb;
+  border-radius: 5px;
+}
+
+// Utility Classes
+.text-gradient {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-charcoal {
+  background-color: $charcoal-900;
+}
+
+.bg-charcoal-light {
+  background-color: $charcoal-800;
+}
+
+.border-glow {
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: $box-shadow-glow;
+}
+
+// Header / Navigation
+.main-header {
+  background: $navbar-bg;
+  backdrop-filter: $navbar-blur;
+  -webkit-backdrop-filter: $navbar-blur;
+  border-bottom: 1px solid $charcoal-600;
+  z-index: 9999;
+  transition: $transition-base;
+  
+  .navbar-brand img {
+    max-height: 50px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .nav-link {
+    color: $gray-text-light !important;
+    font-weight: 500;
+    padding: 1rem 1.25rem !important;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: $gradient-primary;
+      transition: $transition-base;
+      transform: translateX(-50%);
+    }
+    
+    &:hover,
+    &.active {
+      color: $white !important;
+      
+      &::after {
+        width: 80%;
+      }
+    }
+  }
+  
+  .btn-warning {
+    background: $gradient-primary;
+    border: none;
+    color: $white;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: $border-radius-lg;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $box-shadow-glow;
+    }
+  }
+}
+
+// Hero Section
+.hero-banner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: $gradient-dark;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 80%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    animation: pulse 8s ease-in-out infinite;
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  
+  p {
+    font-size: 1.25rem;
+    color: $gray-text;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+  }
+  
+  .btn-warning {
+    background: $gradient-primary;
+    border: none;
+    color: $white;
+    font-weight: 600;
+    padding: 18px 45px;
+    border-radius: $border-radius-lg;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $box-shadow-glow;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+// Services Section
+.service {
+  padding: $section-gap 0;
+  background: $charcoal-900;
+  position: relative;
+  
+  small {
+    color: $electric-blue;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+  
+  .card {
+    background: $charcoal-700;
+    border: $card-border;
+    border-radius: $card-border-radius;
+    padding: 2.5rem;
+    transition: $transition-slow;
+    height: 100%;
+    
+    &:hover {
+      transform: translateY(-10px);
+      border-color: $electric-blue;
+      box-shadow: $box-shadow-glow;
+    }
+    
+    .icon-round {
+      width: 80px;
+      height: 80px;
+      background: $gradient-glow;
+      margin-bottom: 1.5rem;
+      
+      i {
+        font-size: 2rem;
+        color: $electric-blue-light;
+      }
+    }
+    
+    h3 {
+      color: $white;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: $gray-text;
+      line-height: 1.8;
+    }
+  }
+}
+
+// Mobile Apps Featured Section
+.our-service {
+  padding: $section-gap 0;
+  background: $charcoal-800;
+  
+  small {
+    color: $cyan-accent;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 1rem 0 1.5rem;
+  }
+  
+  p {
+    color: $gray-text;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    
+    li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      color: $gray-text-light;
+      
+      i {
+        color: $electric-blue;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  
+  .btn-warning {
+    background: transparent;
+    border: 2px solid $electric-blue;
+    color: $electric-blue-light;
+    
+    &:hover {
+      background: $gradient-primary;
+      border-color: transparent;
+      color: $white;
+    }
+  }
+}
+
+// Portfolio Section
+.portfolio {
+  padding: $section-gap 0;
+  background: linear-gradient(180deg, $charcoal-900 0%, $charcoal-800 100%);
+  position: relative;
+  
+  small {
+    color: $electric-blue;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  
+  .card {
+    background: transparent;
+    border: none;
+    
+    .icon {
+      width: 70px;
+      height: 70px;
+      background: rgba(59, 130, 246, 0.15);
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      
+      i {
+        font-size: 1.75rem;
+        color: $electric-blue-light;
+      }
+    }
+    
+    h3, p {
+      color: $gray-text-light;
+    }
+  }
+  
+  .portfolio-slider {
+    .item {
+      border-radius: $border-radius-xl;
+      overflow: hidden;
+      margin: 1rem;
+      
+      img {
+        transition: $transition-slow;
+        filter: grayscale(20%);
+        
+        &:hover {
+          transform: scale(1.05);
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}
+
+// FAQ Section
+.faq {
+  padding: $section-gap 0;
+  background: $charcoal-900;
+  
+  small {
+    color: $electric-blue;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-top: 1rem;
+  }
+  
+  .accordion-item {
+    background: $charcoal-700;
+    border: $card-border;
+    border-radius: $border-radius-lg;
+    margin-bottom: 1rem;
+    
+    .accordion-button {
+      background: transparent;
+      color: $white;
+      font-weight: 500;
+      box-shadow: none;
+      
+      &:not(.collapsed) {
+        background: rgba(59, 130, 246, 0.1);
+        color: $electric-blue-light;
+      }
+      
+      &::after {
+        filter: brightness(0) invert(1);
+      }
+    }
+    
+    .accordion-body {
+      color: $gray-text;
+      line-height: 1.8;
+    }
+  }
+}
+
+// Contact Section
+.contact {
+  padding: $section-gap 0;
+  background: linear-gradient(180deg, $charcoal-800 0%, $charcoal-900 100%);
+  position: relative;
+  
+  small {
+    color: $cyan-accent;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 2rem;
+  }
+  
+  form {
+    .form-control {
+      background: $charcoal-700;
+      border: $card-border;
+      color: $white;
+      padding: 18px 24px;
+      border-radius: $border-radius-lg;
+      
+      &:focus {
+        background: $charcoal-700;
+        border-color: $electric-blue;
+        box-shadow: $box-shadow-glow;
+        color: $white;
+      }
+      
+      &::placeholder {
+        color: $gray-text;
+      }
+    }
+    
+    label {
+      color: $gray-text-light;
+      font-weight: 500;
+    }
+    
+    .agree {
+      color: $gray-text;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 1.5rem 0;
+      
+      a {
+        color: $electric-blue-light;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .btn-warning {
+      background: $gradient-primary;
+      border: none;
+      color: $white;
+      font-weight: 600;
+      padding: 18px 50px;
+      border-radius: $border-radius-lg;
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: $box-shadow-glow;
+      }
+    }
+  }
+  
+  .testimonial {
+    .details {
+      background: $charcoal-700;
+      border: $card-border;
+      border-radius: $border-radius-xl;
+      padding: 2.5rem;
+      
+      p {
+        color: $gray-text-light;
+        font-style: italic;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      
+      .name h6 {
+        color: $white;
+        margin-bottom: 0.25rem;
+      }
+      
+      .blue-light {
+        color: $electric-blue-light;
+      }
+    }
+  }
+  
+  .trusted-companies {
+    margin-top: 4rem;
+    
+    h3 {
+      color: $gray-text;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+    
+    img {
+      filter: brightness(0) invert(1) opacity(0.6);
+      transition: $transition-base;
+      max-height: 40px;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background: $charcoal-900;
+  border-top: 1px solid $charcoal-600;
+  padding: 80px 0 40px;
+  
+  .footer-logo-col {
+    img {
+      filter: brightness(0) invert(1);
+      max-height: 45px;
+      margin-bottom: 1.5rem;
+    }
+    
+    p {
+      color: $gray-text;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  h5 {
+    color: $white;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 0.75rem;
+      
+      a {
+        color: $gray-text;
+        text-decoration: none;
+        
+        &:hover {
+          color: $electric-blue-light;
+        }
+      }
+    }
+  }
+  
+  .social-icons {
+    a {
+      display: inline-flex;
+      width: 45px;
+      height: 45px;
+      align-items: center;
+      justify-content: center;
+      background: $charcoal-700;
+      border-radius: 50%;
+      color: $gray-text-light;
+      margin-right: 10px;
+      
+      &:hover {
+        background: $gradient-primary;
+        color: $white;
+        transform: translateY(-3px);
+      }
+    }
+  }
+  
+  .copyright {
+    border-top: 1px solid $charcoal-600;
+    margin-top: 60px;
+    padding-top: 30px;
+    text-align: center;
+    color: $gray-text;
+    font-size: 0.9rem;
+  }
+}
+
+// Animations
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Parallax Effect
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Responsive Adjustments
+@media (max-width: 991px) {
+  $section-gap: 80px;
+  
+  .main-header {
+    .navbar-collapse {
+      background: $charcoal-800;
+      padding: 1rem;
+      border-radius: $border-radius-lg;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  $section-gap: 60px;
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-banner {
+    text-align: center;
+    
+    p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

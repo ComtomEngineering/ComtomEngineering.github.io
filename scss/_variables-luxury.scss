@@ -1,0 +1,130 @@
+/*******************/
+// Luxury Theme Variables - Charcoal & Electric Blue
+/********************/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+// Theme Fonts
+$font-family-sans-serif: 'Inter', sans-serif;
+$font-family-heading: 'Space Grotesk', sans-serif;
+
+// Color Palette - Luxury Charcoal Theme
+$charcoal-900: #0a0a0f;      // Deepest charcoal - main background
+$charcoal-800: #12121a;      // Secondary dark
+$charcoal-700: #1a1a25;      // Card backgrounds
+$charcoal-600: #252535;      // Borders
+$charcoal-500: #3a3a4a;      // Muted elements
+
+$electric-blue: #3b82f6;     // Primary accent - vibrant blue
+$electric-blue-light: #60a5fa;
+$electric-blue-dark: #2563eb;
+
+$cyan-accent: #06b6d4;       // Secondary accent - cyan
+$purple-accent: #8b5cf6;     // Tertiary accent
+
+$white: #ffffff;
+$off-white: #f8fafc;
+$gray-text: #94a3b8;
+$gray-text-light: #cbd5e1;
+
+// Gradient definitions
+$gradient-primary: linear-gradient(135deg, $electric-blue 0%, $cyan-accent 100%);
+$gradient-dark: linear-gradient(180deg, $charcoal-900 0%, $charcoal-800 100%);
+$gradient-glow: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.08) 100%);
+
+// Theme colors map
+$primary: $electric-blue;
+$secondary: $charcoal-700;
+$info: $cyan-accent;
+$light: $off-white;
+$warning: $electric-blue;
+$success: #10b981;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "info": $info,
+  "light": $light,
+  "warning": $warning,
+  "success": $success,
+);
+
+// Body & Base
+$body-bg: $charcoal-900;
+$body-color: $gray-text-light;
+$font-size-base: 1.125rem;
+
+// Typography
+$h1-font-size: 4.5rem;
+$h2-font-size: 3.5rem;
+$h3-font-size: 2.5rem;
+$h4-font-size: 2rem;
+$h5-font-size: 1.5rem;
+$h6-font-size: 1.25rem;
+
+$font-sizes: (
+  1: 75px,
+  2: 65px,
+  3: 55px,
+  4: 25px,
+  5: 22px,
+  6: 20px,
+  7: 18px,
+  8: 15px,
+  9: 14px,
+  10: 13px,
+  11: 10px,
+);
+
+// Spacing
+$section-gap: 120px;
+$top-gutter: 60px;
+
+// Border Radius
+$border-radius: 8px;
+$border-radius-sm: 12px;
+$border-radius-lg: 20px;
+$border-radius-xl: 30px;
+$border-radius-xxl: 40px;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Shadows - Subtle luxury shadows
+$box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+$box-shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.2);
+$box-shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.4);
+$box-shadow-glow: 0 0 40px rgba(59, 130, 246, 0.3);
+
+// Buttons
+$btn-padding-y: 18px;
+$btn-padding-x: 40px;
+$btn-font-size: 16px;
+$btn-font-weight: $font-weight-semibold;
+$btn-border-radius: $border-radius-lg;
+$btn-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Cards
+$card-spacer-y: 50px;
+$card-spacer-x: 45px;
+$card-border-radius: $border-radius-xl;
+$card-bg: $charcoal-700;
+$card-border: 1px solid $charcoal-600;
+
+// Navbar
+$navbar-bg: rgba(10, 10, 15, 0.95);
+$navbar-blur: blur(20px);
+
+// Animations
+$transition-base: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Opacity
+$opacity-2: 0.2;
+
+// Custom scrollbar
+$scrollbar-bg: $charcoal-800;
+$scrollbar-thumb: $electric-blue;
