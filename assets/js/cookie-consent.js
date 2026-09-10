@@ -68,6 +68,7 @@
       window.gtag('js', new Date());
       window.gtag('config', GA_ID);
     };
+    s.onerror = function () { console.warn('GA loader failed to load'); };
     document.head.appendChild(s);
   }
 
@@ -84,7 +85,7 @@
     bar.setAttribute('role', 'dialog');
     bar.setAttribute('aria-label', 'Cookie consent');
     bar.className = [
-      'fixed bottom-0 left-0 right-0 z-[100] w-full',
+      'fixed bottom-0 left-0 right-0 z-[90] w-full', // below contact modal (z-[100]), above header (z-50)
       'bg-surface-container border-t border-blue-600/30',
       'shadow-[0_-10px_40px_rgba(0,0,0,0.45)]',
       'px-space-md py-space-sm sm:px-space-lg'
