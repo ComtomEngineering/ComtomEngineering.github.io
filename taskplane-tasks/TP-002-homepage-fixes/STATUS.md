@@ -41,13 +41,14 @@
 ---
 
 ### Step 3: Split Case Studies from customer quotes
-**Status:** ⬜ Not Started
+**Status:** ✅ Complete
 
-- [ ] New `<section id="case-studies">` with 3 brief project cards (Electric AI, Schonfeld, Todaytix) + subpage links + portfolio images
-- [ ] Four quote cards moved into their own `<section id="testimonials">`; old zero-height anchor div removed
-- [ ] Section order: solutions → products → case-studies → testimonials → how-we-work
-- [ ] Nav + mobile menu links resolve to correct sections
-- [ ] No duplicate ids / orphaned containers
+- [x] New `<section id="case-studies">` with 3 brief project cards (Electric AI, Schonfeld, Todaytix) + subpage links + portfolio images
+- [x] Four quote cards moved into their own `<section id="testimonials">`; old zero-height anchor div removed
+- [x] Section order: solutions(123) → products(208) → case-studies(433) → testimonials(483) → how-we-work(599)
+- [x] Nav + mobile menu links resolve to correct sections (#case-studies, #testimonials now real sections; footer link also resolves)
+- [x] No duplicate ids / orphaned containers (grep: single id="testimonials", single id="case-studies")
+- [x] Section number labels renumbered: 03 case-studies, 04 customer quotes, 05 how-we-work (was 03)
 
 ---
 
