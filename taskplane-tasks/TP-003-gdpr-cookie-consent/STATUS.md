@@ -1,6 +1,6 @@
 # TP-003: GDPR Cookie Consent Banner (Google Analytics) — Status
 
-**Current Step:** Step 3: Testing & Verification
+**Current Step:** Step 4: Documentation & Delivery
 **Status:** 🟡 In Progress
 **Last Updated:** 2026-09-10
 **Review Level:** 2
@@ -55,13 +55,16 @@ One checkbox per page. **Depth note (R003):** case-study pages are TWO levels be
 ---
 
 ### Step 3: Testing & Verification
-**Status:** ⬜ Not Started
+**Status:** ✅ Complete
 
-- [ ] No page loads gtag directly (grep googletagmanager in HTML returns nothing)
-- [ ] `cookie-consent.js` included exactly once per page with correct relative path
-- [ ] `node --check assets/js/cookie-consent.js` passes
-- [ ] Headless/manual verification of banner + consent flow (method logged)
-- [ ] Privacy link resolves on root page and case-study page
+- [x] No page loads gtag directly (grep googletagmanager in HTML returns nothing)
+- [x] `cookie-consent.js` included exactly once per page with correct relative path
+- [x] `node --check assets/js/cookie-consent.js` passes
+- [x] Headless/manual verification of banner + consent flow (method logged)
+- [x] Privacy link resolves on root page and case-study page
+
+> Method: structural greps (all PASS) + real headless test via `google-chrome --headless=new` + Chrome DevTools Protocol over Node 22 native WebSocket (script: /tmp/tp003-cdp-test.mjs, profile /tmp/tp003-chrome-profile) — 21/21 checks PASS, covering: banner shown for fresh visitor w/ role=dialog + aria; no GA before consent; gtag stub + dataLayer present; Accept → JSON consent stored, banner dismissed, gtag loader injected (G-C7YDJRDD8X); reload → no banner + GA loads (persisted); declined → no banner, no GA, case-study page script loaded without 404; privacy href = `../../privacy.html` on case-study page and resolves to existing file; bare-string backward compat honored.
+> No code review run for Step 3 itself (verification-only step; the Step 3 diff is STATUS.md only — all HTML/JS changes covered by R005 APPROVE).
 
 ---
 
@@ -93,6 +96,7 @@ One checkbox per page. **Depth note (R003):** case-study pages are TWO levels be
 | 2026-09-10 | Step 0 complete | 8 pages confirmed; GA inline snippet on all; gtag refs in index:779 + contact:34 (try/catch) |
 | 2026-09-10 | Step 1 complete | R001+R002 APPROVE; assets/js/cookie-consent.js shipped |
 | 2026-09-10 | Step 2 complete | R003 REVISE→fixed (depth `../../`, PROMPT Amendment 1); R004+R005 APPROVE; GA snippet removed + defer include before `</body>` on all 8 pages |
+| 2026-09-10 | Step 3 complete | 21/21 headless CDP checks PASS (chrome --headless=new, /tmp/tp003-cdp-test.mjs); greps + node --check PASS |
 | 2026-09-10 13:38 | Review R003 | plan Step 2: REVISE |
 | 2026-09-10 13:46 | Review R004 | plan Step 2: UNKNOWN |
 | 2026-09-10 13:54 | Review R005 | code Step 2: APPROVE |
