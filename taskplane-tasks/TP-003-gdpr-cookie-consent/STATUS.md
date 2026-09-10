@@ -1,10 +1,10 @@
 # TP-003: GDPR Cookie Consent Banner (Google Analytics) — Status
 
-**Current Step:** Step 2: Gate GA on all pages
+**Current Step:** Step 3: Testing & Verification
 **Status:** 🟡 In Progress
 **Last Updated:** 2026-09-10
 **Review Level:** 2
-**Review Counter:** 4
+**Review Counter:** 5
 **Iteration:** 1
 **Size:** M
 
@@ -37,7 +37,7 @@
 ---
 
 ### Step 2: Gate GA on all pages
-**Status:** ⬜ Not Started
+**Status:** ✅ Complete
 
 One checkbox per page. **Depth note (R003):** case-study pages are TWO levels below root — script include is `../../assets/js/cookie-consent.js` (confirmed against existing `../../assets/images/...` refs in those pages).
 
@@ -80,6 +80,9 @@ One checkbox per page. **Depth note (R003):** case-study pages are TWO levels be
 |---|------|------|---------|------|
 | R001 | plan | 1 | APPROVE | .reviews/R001-plan-step1.md |
 | R002 | code | 1 | APPROVE | .reviews/R002-code-step1.md |
+| R003 | plan | 2 | REVISE (case-study depth `../`→`../../`) | .reviews/R003-plan-step2.md |
+| R004 | plan | 2 | APPROVE (R003 fix verified) | .reviews/R004-plan-step2.md |
+| R005 | code | 2 | APPROVE | .reviews/R005-code-step2.md |
 
 ---
 
@@ -89,5 +92,7 @@ One checkbox per page. **Depth note (R003):** case-study pages are TWO levels be
 | 2026-09-10 13:32 | Review R002 | code Step 1: UNKNOWN |
 | 2026-09-10 | Step 0 complete | 8 pages confirmed; GA inline snippet on all; gtag refs in index:779 + contact:34 (try/catch) |
 | 2026-09-10 | Step 1 complete | R001+R002 APPROVE; assets/js/cookie-consent.js shipped |
+| 2026-09-10 | Step 2 complete | R003 REVISE→fixed (depth `../../`, PROMPT Amendment 1); R004+R005 APPROVE; GA snippet removed + defer include before `</body>` on all 8 pages |
 | 2026-09-10 13:38 | Review R003 | plan Step 2: REVISE |
 | 2026-09-10 13:46 | Review R004 | plan Step 2: UNKNOWN |
+| 2026-09-10 13:54 | Review R005 | code Step 2: APPROVE |
