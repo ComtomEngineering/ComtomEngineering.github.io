@@ -1,0 +1,40 @@
+{
+  "batchId": "20260910T151115",
+  "updatedAt": 1789049006205,
+  "agents": {
+    "orch-comtom-lane-1-worker": {
+      "batchId": "20260910T151115",
+      "agentId": "orch-comtom-lane-1-worker",
+      "role": "worker",
+      "laneNumber": 1,
+      "taskId": "TP-003",
+      "repoId": "default",
+      "pid": 17012,
+      "parentPid": 16537,
+      "startedAt": 1789046336064,
+      "status": "exited",
+      "cwd": "/home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T151115/lane-1",
+      "packet": {
+        "promptPath": "/home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T151115/lane-1/taskplane-tasks/TP-003-gdpr-cookie-consent/PROMPT.md",
+        "statusPath": "/home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T151115/lane-1/taskplane-tasks/TP-003-gdpr-cookie-consent/STATUS.md",
+        "donePath": "/home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T151115/lane-1/taskplane-tasks/TP-003-gdpr-cookie-consent/.DONE",
+        "reviewsDir": "/home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T151115/lane-1/taskplane-tasks/TP-003-gdpr-cookie-consent/.reviews",
+        "taskFolder": "/home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T151115/lane-1/taskplane-tasks/TP-003-gdpr-cookie-consent"
+      }
+    },
+    "orch-comtom-merge-1": {
+      "batchId": "20260910T151115",
+      "agentId": "orch-comtom-merge-1",
+      "role": "merger",
+      "laneNumber": null,
+      "taskId": null,
+      "repoId": "default",
+      "pid": 19519,
+      "parentPid": 16537,
+      "startedAt": 1789048886829,
+      "status": "exited",
+      "cwd": "/home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T151115/merge",
+      "packet": null
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "exitCode": 143,
+  "exitSignal": null,
+  "tokens": {
+    "input": 3570,
+    "output": 948,
+    "cacheRead": 13344,
+    "cacheWrite": 0
+  },
+  "cost": null,
+  "toolCalls": 6,
+  "retries": 0,
+  "compactions": 0,
+  "durationSec": 28,
+  "lastToolCall": "write: /home/comtom/Projects/ComtomEngineering.github.io/.pi/merge-result-w1-lane1-comtom-20260910T161616.json",
+  "error": null,
+  "contextUsage": {
+    "tokens": 4517,
+    "contextWindow": 262143,
+    "percent": 1.7231053280079955
+  }
+}

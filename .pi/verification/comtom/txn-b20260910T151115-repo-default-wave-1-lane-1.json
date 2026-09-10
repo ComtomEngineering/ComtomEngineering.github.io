@@ -1,0 +1,16 @@
+{
+  "opId": "comtom",
+  "batchId": "20260910T151115",
+  "waveIndex": 1,
+  "laneNumber": 1,
+  "repoId": null,
+  "baseHEAD": "771aa3c235b14af6adfab40b3e48b3d2dffa07ab",
+  "laneHEAD": "6c408758798dbec1a044f8b312c3cad37a114e97",
+  "mergedHEAD": "6c408758798dbec1a044f8b312c3cad37a114e97",
+  "status": "committed",
+  "rollbackAttempted": false,
+  "rollbackResult": null,
+  "recoveryCommands": [],
+  "startedAt": "2026-09-10T14:01:26.816Z",
+  "completedAt": "2026-09-10T14:03:26.867Z"
+}

@@ -1,0 +1,21 @@
+{
+  "batchId": "20260910T161616",
+  "mergeNumber": 1,
+  "sessionName": "orch-comtom-merge-1",
+  "waveIndex": 1,
+  "status": "failed",
+  "agent": {
+    "agentId": "orch-comtom-merge-1",
+    "status": "crashed",
+    "elapsedMs": 28044,
+    "toolCalls": 6,
+    "contextPct": 1.7231053280079955,
+    "costUsd": 0,
+    "lastTool": "write: /home/comtom/Projects/ComtomEngineering.github.io/.pi/merge-result-w1-lane1-comtom-20260910T161616.json",
+    "inputTokens": 3570,
+    "outputTokens": 948,
+    "cacheReadTokens": 13344,
+    "cacheWriteTokens": 0
+  },
+  "updatedAt": 1789050890369
+}

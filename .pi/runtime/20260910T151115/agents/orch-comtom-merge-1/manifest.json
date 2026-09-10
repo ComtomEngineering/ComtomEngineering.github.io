@@ -1,0 +1,14 @@
+{
+  "batchId": "20260910T151115",
+  "agentId": "orch-comtom-merge-1",
+  "role": "merger",
+  "laneNumber": null,
+  "taskId": null,
+  "repoId": "default",
+  "pid": 19519,
+  "parentPid": 16537,
+  "startedAt": 1789048886829,
+  "status": "exited",
+  "cwd": "/home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T151115/merge",
+  "packet": null
+}

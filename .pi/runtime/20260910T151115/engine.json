@@ -1,0 +1,11 @@
+{
+  "batchId": "20260910T151115",
+  "pid": 16537,
+  "supervisorPid": 15461,
+  "startedAt": 1789045875742,
+  "taskplaneVersion": "0.30.6",
+  "taskplaneBuild": "bedb2c594fcc",
+  "exitedAt": 1789049007505,
+  "exitCode": 0,
+  "exitReason": "child-exit"
+}

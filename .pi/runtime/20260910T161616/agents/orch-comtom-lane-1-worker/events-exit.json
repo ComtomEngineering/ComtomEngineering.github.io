@@ -1,0 +1,22 @@
+{
+  "exitCode": 0,
+  "exitSignal": null,
+  "tokens": {
+    "input": 93201,
+    "output": 14375,
+    "cacheRead": 925664,
+    "cacheWrite": 0
+  },
+  "cost": null,
+  "toolCalls": 37,
+  "retries": 0,
+  "compactions": 0,
+  "durationSec": 1076,
+  "lastToolCall": "bash: cd /home/comtom/Projects/ComtomEngineering.github.io/.worktrees/comtom-20260910T161616/lane-1 && git add -A && git commit -m \"feat(TP-004): complete Step 3 — update CONTEXT.md Current State + log discoveries\" && echo \"=== final STATUS ===\" && grep -E '^\\*\\*Status|^\\*\\*Current Step' taskplane-tasks/T",
+  "error": null,
+  "contextUsage": {
+    "tokens": 42192,
+    "contextWindow": 262143,
+    "percent": 16.095032100799944
+  }
+}

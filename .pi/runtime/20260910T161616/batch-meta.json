@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "batchId": "20260910T161616",
+  "wavePlan": [
+    [
+      "TP-004"
+    ]
+  ],
+  "baseBranch": "2026-design",
+  "orchBranch": "orch/comtom-20260910T161616",
+  "mode": "repo",
+  "startedAt": 1789049780716,
+  "totalWaves": 1
+}
