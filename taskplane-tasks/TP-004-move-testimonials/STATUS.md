@@ -1,11 +1,11 @@
 # TP-004: Move Testimonials Section Below How We Work — Status
 
-**Current Step:** Not Started
-**Status:** 🔵 Ready for Execution
+**Current Step:** Step 0: Preflight
+**Status:** 🟡 In Progress
 **Last Updated:** 2026-09-10
 **Review Level:** 1
 **Review Counter:** 0
-**Iteration:** 0
+**Iteration:** 1
 **Size:** S
 
 > **Hydration:** Checkboxes represent meaningful outcomes, not individual code
@@ -14,20 +14,20 @@
 ---
 
 ### Step 0: Preflight
-**Status:** ⬜ Not Started
+**Status:** 🟨 In Progress
 
-- [ ] `index.html` exists; current order confirmed: solutions → products → case-studies → testimonials → how-we-work
-- [ ] Testimonials + how-we-work section boundaries located
+- [x] `index.html` exists; current order confirmed: solutions → products → case-studies → testimonials → how-we-work
+- [x] Testimonials + how-we-work section boundaries located
 
 ---
 
 ### Step 1: Move the testimonials section
-**Status:** ⬜ Not Started
+**Status:** 🟨 In Progress
 
-- [ ] Full `<section id="testimonials">` element moved to directly after `#how-we-work` closing tag
-- [ ] Section-level background/spacing classes preserved
-- [ ] Final DOM order: solutions → products → case-studies → how-we-work → testimonials
-- [ ] No other content disturbed
+- [x] Full `<section id="testimonials">` element moved to directly after `#how-we-work` closing tag (incl. its `<!-- Section 4: Customer Quotes -->` comment line)
+- [x] Section-level background/spacing classes preserved (section tag classes untouched: `py-space-3xl relative`)
+- [x] Final DOM order: solutions(123) → products(208) → case-studies(433) → how-we-work(483) → testimonials(570)
+- [x] No other content disturbed (line count 775 unchanged; all tag pairs balanced; git diff = pure block move)
 
 ---
 
@@ -55,3 +55,6 @@
 |---|------|------|---------|------|
 
 ---
+
+| 2026-09-10 14:16 | Task started | Runtime V2 lane-runner execution |
+| 2026-09-10 14:16 | Step 0 started | Preflight |
