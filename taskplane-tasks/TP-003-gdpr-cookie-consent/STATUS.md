@@ -118,3 +118,6 @@ One checkbox per page. **Depth note (R003):** case-study pages are TWO levels be
 | 2026-09-10 13:38 | Review R003 | plan Step 2: REVISE |
 | 2026-09-10 13:46 | Review R004 | plan Step 2: UNKNOWN |
 | 2026-09-10 13:54 | Review R005 | code Step 2: APPROVE |
+
+| 2026-09-10 14:01 | Worker iter 1 | done in 2548s, tools: 63 |
+| 2026-09-10 14:01 | Task complete | .DONE created |
