@@ -87,7 +87,7 @@ Add a GDPR cookie-consent dialog to the bottom of the screen on every page so us
 For **each** of the 8 HTML pages (index, contact, privacy, terms, 404, case-studies/electric, case-studies/schonfeld, case-studies/todaytix):
 
 - [ ] Remove the **immediate** GA load from `<head>`: drop `<script async src="https://www.googletagmanager.com/gtag/js?id=G-C7YDJRDD8X"></script>` and the inline `gtag('config', ...)` call (keep nothing that auto-fires). The page may keep an empty `window.dataLayer` queue definition if any other inline code references it — verify per page; if no other code references `dataLayer`/`gtag`, remove the inline snippet entirely.
-- [ ] Add `<script src="assets/js/cookie-consent.js" defer></script>` in `<head>` (or just before `</body>` — pick one, use it on all pages). **Relative path differs by page depth**: root pages use `assets/js/cookie-consent.js`; case-study pages (one level deep) use `../assets/js/cookie-consent.js`.
+- [ ] Add `<script src="assets/js/cookie-consent.js" defer></script>` in `<head>` (or just before `</body>` — pick one, use it on all pages). **Relative path differs by page depth**: root pages use `assets/js/cookie-consent.js`; case-study pages (two levels deep: `case-studies/<name>/index.html`) use `../../assets/js/cookie-consent.js`. (Path corrected per R003 plan review — existing asset refs on case-study pages use `../../assets/...`.)
 - [ ] Repeat for all 8 pages (list each page explicitly in STATUS.md as you go)
 
 **Artifacts:**
@@ -151,8 +151,6 @@ for this task MUST include the task ID for traceability:
 
 ## Amendments (Added During Execution)
 
-<!-- Workers add amendments here if issues discovered during execution.
-     Format:
-     ### Amendment N — YYYY-MM-DD HH:MM
-     **Issue:** [what was wrong]
-     **Resolution:** [what was changed] -->
+### Amendment 1 — 2026-09-10 13:40
+**Issue:** Step 2 specified `../assets/js/cookie-consent.js` for case-study pages, but they are two directories below root (`case-studies/<name>/index.html`); existing asset refs in those pages use `../../assets/...`.
+**Resolution:** Corrected the Step 2 path to `../../assets/js/cookie-consent.js` (per R003 plan review).
