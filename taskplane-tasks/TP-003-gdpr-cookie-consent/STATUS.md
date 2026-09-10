@@ -1,11 +1,11 @@
 # TP-003: GDPR Cookie Consent Banner (Google Analytics) — Status
 
-**Current Step:** Not Started
-**Status:** 🔵 Ready for Execution
+**Current Step:** Step 1: Create shared consent script
+**Status:** 🟡 In Progress
 **Last Updated:** 2026-09-10
 **Review Level:** 2
-**Review Counter:** 0
-**Iteration:** 0
+**Review Counter:** 1
+**Iteration:** 1
 **Size:** M
 
 > **Hydration:** Checkboxes represent meaningful outcomes, not individual code
@@ -15,19 +15,23 @@
 ---
 
 ### Step 0: Preflight
-**Status:** ⬜ Not Started
+**Status:** ✅ Complete
 
-- [ ] All 8 HTML pages listed in File Scope exist
-- [ ] GA loaded immediately via inline head snippet on every page (G-C7YDJRDD8X)
+- [x] All 8 HTML pages listed in File Scope exist
+- [x] GA loaded immediately via inline head snippet on every page (G-C7YDJRDD8X)
+
+> Notes: GA snippet is one inline line in `<head>` on all 8 pages. `index.html:779` and `contact.html:34` call `gtag('event','contact_submit')` inside try/catch — global `gtag` stub must keep existing (provided by cookie-consent.js). No other `dataLayer`/`gtag` references.
 
 ---
 
 ### Step 1: Create shared consent script
-**Status:** ⬜ Not Started
+**Status:** 🟨 In Progress
 
-- [ ] `assets/js/cookie-consent.js` created (banner + localStorage choice + GA gating)
-- [ ] Banner: fixed bottom bar, dialog aria, Accept/Decline buttons, privacy link with depth-correct path
-- [ ] GA loader (`G-C7YDJRDD8X`) injected only on accepted consent
+- [x] `assets/js/cookie-consent.js` created (banner + localStorage choice + GA gating)
+- [x] Banner: fixed bottom bar, dialog aria, Accept/Decline buttons, privacy link with depth-correct path
+- [x] GA loader (`G-C7YDJRDD8X`) injected only on accepted consent
+
+> R001 plan review: APPROVE. Suggestions applied: #1 idempotent gtag/dataLayer stub guard; #2 privacy href computed from `location.pathname` (segments > 2 → `../../`); #3 try/catch around localStorage read+write; #4 JSON storage `{consent, ts}` with bare-string backward-compat.
 
 ---
 
@@ -73,3 +77,7 @@
 |---|------|------|---------|------|
 
 ---
+
+| 2026-09-10 13:18 | Task started | Runtime V2 lane-runner execution |
+| 2026-09-10 13:18 | Step 0 started | Preflight |
+| 2026-09-10 13:25 | Review R001 | plan Step 1: UNKNOWN |
