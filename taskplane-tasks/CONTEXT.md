@@ -17,6 +17,7 @@ parallel batch execution or `/orch <path/to/PROMPT.md>` for a single task.
 **Completed (2026-09-10):**
 - TP-002 — Homepage fixes: removed unused nav user button; fixed 3 mismatched testimonial names (Rohi Bagaria, Nathan Gould, Sofia Fernandez); split `#case-studies` (new section of 3 brief project cards: Electric AI, Schonfeld, Todaytix) from `#testimonials` (4 customer quotes). Homepage section order now: solutions → products → case-studies → testimonials → how-we-work.
 - TP-003 — GDPR cookie consent banner: `assets/js/cookie-consent.js` injected on all 8 pages (defer, before `</body>`). GA (`G-C7YDJRDD8X`) is consent-gated — gtag loader injected only after Accept; consent persisted in `localStorage[comtom_cookie_consent]` (JSON `{consent, ts}`); banner is a fixed bottom bar with Accept/Decline; declined = no GA, no banner. **Cookie consent live; GA consent-gated site-wide.**
+- TP-004 — Homepage section reorder: moved `#testimonials` (Customer Quotes, 4 quote cards) below `#how-we-work` (Methodology). Pure block move in `index.html`; all content, ids, anchors, and nav links intact. Homepage section order now: solutions → products → case-studies → how-we-work → testimonials.
 
 **Pending work (2026-09-10):**
 - (none)
@@ -39,3 +40,4 @@ parallel batch execution or `/orch <path/to/PROMPT.md>` for a single task.
 - [ ] **privacy.html Analytics wording predates consent gate** — policy says "analytics collection itself continues unless your browser blocks the script" and doesn't mention the consent banner or that GA is now gated on explicit Accept/Decline. Legal copy — needs approved rewrite before touching. (discovered during TP-003)
 - [ ] **Broken footer links on case-study pages** — `case-studies/*/index.html` footers link `href="privacy.html"` / `href="terms.html"` (missing `../../`), 404 on deployed site. Pre-existing; same depth bug class TP-003 fixed for the consent script. (discovered during TP-003)
 - [ ] **Consent banner focus management** — banner shows without moving focus to a button (deliberate: non-modal bar). If a WCAG audit is planned, consider focusing the Decline button (safe default) on banner appearance. (noted during TP-003, R002)
+- [ ] **Duplicate `<!-- Section 4: … -->` comment labels in index.html** — both How We Work (line ~482) and Customer Quotes/Testimonials (line ~569) are labeled "Section 4" in their section comments. Pre-existing cosmetic numbering inconsistency; comments travel with their sections. Fix comment numbering when `index.html` is next edited. (discovered during TP-004)
