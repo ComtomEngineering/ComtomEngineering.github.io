@@ -1,6 +1,6 @@
 # TP-003: GDPR Cookie Consent Banner (Google Analytics) — Status
 
-**Current Step:** Step 1: Create shared consent script
+**Current Step:** Step 2: Gate GA on all pages
 **Status:** 🟡 In Progress
 **Last Updated:** 2026-09-10
 **Review Level:** 2
@@ -25,13 +25,14 @@
 ---
 
 ### Step 1: Create shared consent script
-**Status:** 🟨 In Progress
+**Status:** ✅ Complete
 
 - [x] `assets/js/cookie-consent.js` created (banner + localStorage choice + GA gating)
 - [x] Banner: fixed bottom bar, dialog aria, Accept/Decline buttons, privacy link with depth-correct path
 - [x] GA loader (`G-C7YDJRDD8X`) injected only on accepted consent
 
 > R001 plan review: APPROVE. Suggestions applied: #1 idempotent gtag/dataLayer stub guard; #2 privacy href computed from `location.pathname` (segments > 2 → `../../`); #3 try/catch around localStorage read+write; #4 JSON storage `{consent, ts}` with bare-string backward-compat.
+> R002 code review: APPROVE. Non-blocking observations applied proactively: banner z-index `z-[100]`→`z-[90]` (below contact modal z-[100]), `s.onerror` console.warn on GA loader. Focus-management observation: non-modal bottom bar, no focus trap — note in Discoveries.
 
 ---
 
@@ -75,6 +76,8 @@
 
 | # | Type | Step | Verdict | File |
 |---|------|------|---------|------|
+| R001 | plan | 1 | APPROVE | .reviews/R001-plan-step1.md |
+| R002 | code | 1 | APPROVE | .reviews/R002-code-step1.md |
 
 ---
 
@@ -82,3 +85,5 @@
 | 2026-09-10 13:18 | Step 0 started | Preflight |
 | 2026-09-10 13:25 | Review R001 | plan Step 1: UNKNOWN |
 | 2026-09-10 13:32 | Review R002 | code Step 1: UNKNOWN |
+| 2026-09-10 | Step 0 complete | 8 pages confirmed; GA inline snippet on all; gtag refs in index:779 + contact:34 (try/catch) |
+| 2026-09-10 | Step 1 complete | R001+R002 APPROVE; assets/js/cookie-consent.js shipped |
