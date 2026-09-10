@@ -1,7 +1,7 @@
 # TP-002: Homepage Fixes (Nav, Names, Case Studies Section) — Status
 
-**Current Step:** Step 3: Split Case Studies from customer quotes
-**Status:** 🟡 In Progress
+**Current Step:** Step 5: Documentation & Delivery
+**Status:** ✅ Complete
 **Last Updated:** 2026-09-10
 **Review Level:** 1
 **Review Counter:** 0
@@ -53,21 +53,21 @@
 ---
 
 ### Step 4: Testing & Verification
-**Status:** ⬜ Not Started
+**Status:** ✅ Complete
 
-- [ ] Tag balance / HTML structure sanity check passes
-- [ ] All section ids unique
-- [ ] All anchor links resolve to existing ids
-- [ ] All referenced image paths exist on disk
-- [ ] No stale names: grep for old names returns nothing
+- [x] Tag balance / HTML structure sanity check passes (python html.parser: 0 errors, 0 unclosed; html-validate: 24 errors all pre-existing no-inline-style on star spans, none in new section)
+- [x] All section ids unique (dup check: {})
+- [x] All anchor links resolve to existing ids (missing: empty set)
+- [x] All referenced image paths exist on disk (0 missing)
+- [x] No stale names: grep for old names returns nothing (exit=1)
 
 ---
 
 ### Step 5: Documentation & Delivery
-**Status:** ⬜ Not Started
+**Status:** ✅ Complete
 
-- [ ] CONTEXT.md Current State updated
-- [ ] Discoveries logged
+- [x] CONTEXT.md Current State updated (TP-002 moved to Completed, section restructure noted)
+- [x] Discoveries logged (see Discoveries table below + CONTEXT.md tech debt)
 
 ---
 
@@ -76,8 +76,18 @@
 | # | Type | Step | Verdict | File |
 |---|------|------|---------|------|
 
+## Discoveries
+
+| # | Discovery | Action |
+|---|-----------|--------|
+| 1 | Case-study subpages (`case-studies/*/index.html`) still contain stale placeholder names (e.g. "Sarah M." on electric page); TP-002 file scope = index.html only | Logged as tech debt in CONTEXT.md |
+| 2 | Existing section number labels had duplicate 04; renumbered to 03 (case-studies) / 04 (customer quotes) / 05 (how-we-work) | Done in Step 3 |
+| 3 | html-validate reports 24 pre-existing no-inline-style errors (star spans); none in new code | Logged as tech debt in CONTEXT.md |
+
 ---
 
 | 2026-09-10 13:11 | Task started | Runtime V2 lane-runner execution |
 | 2026-09-10 13:11 | Step 0 started | Preflight |
 | 2026-09-10 13:15 | Steps 0-2 complete | Preflight, person icon removed, names fixed (commit eac5e9b + pending) |
+| 2026-09-10 13:20 | Step 3 complete | Section split + reorder, commit a6128ba |
+| 2026-09-10 13:22 | Steps 4-5 complete | Verification all green; CONTEXT.md updated; task complete |
