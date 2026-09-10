@@ -2,7 +2,7 @@
 
 **Last Updated:** 2026-09-10
 **Status:** Active
-**Next Task ID:** TP-002
+**Next Task ID:** TP-004
 
 ---
 
@@ -13,6 +13,10 @@ to a specific domain area are created here.
 
 Taskplane is configured and ready for task execution. Use `/orch all` for
 parallel batch execution or `/orch <path/to/PROMPT.md>` for a single task.
+
+**Pending work (2026-09-10):**
+- TP-002 — Homepage fixes: remove unused nav user button, fix 3 mismatched testimonial names, split Case Studies (brief project cards) from Testimonials
+- TP-003 — GDPR cookie consent banner on all pages; Google Analytics load gated on consent
 
 ---
 
