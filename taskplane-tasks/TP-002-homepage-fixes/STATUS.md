@@ -1,6 +1,6 @@
 # TP-002: Homepage Fixes (Nav, Names, Case Studies Section) — Status
 
-**Current Step:** Step 0: Preflight
+**Current Step:** Step 3: Split Case Studies from customer quotes
 **Status:** 🟡 In Progress
 **Last Updated:** 2026-09-10
 **Review Level:** 1
@@ -15,7 +15,7 @@
 ---
 
 ### Step 0: Preflight
-**Status:** 🟨 In Progress
+**Status:** ✅ Complete
 
 - [x] `index.html` exists at repo root
 - [x] Four work items confirmed present (person icon, 3 mismatched names, testimonials-in-case-studies layout)
@@ -31,12 +31,12 @@
 ---
 
 ### Step 2: Fix testimonial names that don't match profile pictures
-**Status:** ⬜ Not Started
+**Status:** ✅ Complete
 
-- [ ] "David K." → "Rohi Bagaria" (name + alt)
-- [ ] "Sarah M." → "Nathan Gould" (name + alt)
-- [ ] "Marcus Vance" → "Sofia Fernandez" (name + alt)
-- [ ] Grep confirms no stale names remain
+- [x] "David K." → "Rohi Bagaria" (name + alt)
+- [x] "Sarah M." → "Nathan Gould" (name + alt)
+- [x] "Marcus Vance" → "Sofia Fernandez" (name + alt)
+- [x] Grep confirms no stale names remain (exit=1, no matches)
 
 ---
 
@@ -79,3 +79,4 @@
 
 | 2026-09-10 13:11 | Task started | Runtime V2 lane-runner execution |
 | 2026-09-10 13:11 | Step 0 started | Preflight |
+| 2026-09-10 13:15 | Steps 0-2 complete | Preflight, person icon removed, names fixed (commit eac5e9b + pending) |
