@@ -4,7 +4,7 @@
 **Status:** 🟡 In Progress
 **Last Updated:** 2026-09-10
 **Review Level:** 2
-**Review Counter:** 3
+**Review Counter:** 4
 **Iteration:** 1
 **Size:** M
 
@@ -41,14 +41,16 @@
 
 One checkbox per page. **Depth note (R003):** case-study pages are TWO levels below root — script include is `../../assets/js/cookie-consent.js` (confirmed against existing `../../assets/images/...` refs in those pages).
 
-- [ ] index.html — immediate GA removed, script include added (depth: root)
-- [ ] contact.html — immediate GA removed, script include added (depth: root)
-- [ ] privacy.html — immediate GA removed, script include added (depth: root)
-- [ ] terms.html — immediate GA removed, script include added (depth: root)
-- [ ] 404.html — immediate GA removed, script include added (depth: root)
-- [ ] case-studies/electric/index.html — immediate GA removed, script include added (depth: `../../`)
-- [ ] case-studies/schonfeld/index.html — immediate GA removed, script include added (depth: `../../`)
-- [ ] case-studies/todaytix/index.html — immediate GA removed, script include added (depth: `../../`)
+- [x] index.html — immediate GA removed, script include added (depth: root)
+- [x] contact.html — immediate GA removed, script include added (depth: root)
+- [x] privacy.html — immediate GA removed, script include added (depth: root)
+- [x] terms.html — immediate GA removed, script include added (depth: root)
+- [x] 404.html — immediate GA removed, script include added (depth: root)
+- [x] case-studies/electric/index.html — immediate GA removed, script include added (depth: `../../`)
+- [x] case-studies/schonfeld/index.html — immediate GA removed, script include added (depth: `../../`)
+- [x] case-studies/todaytix/index.html — immediate GA removed, script include added (depth: `../../`)
+
+> Placement decision (per R004 obs. 2): `<script src="…cookie-consent.js" defer></script>` inserted immediately before `</body>` on all 8 pages (single consistent placement). GA snippet removed surgically — only the 2 script tags stripped from the shared head line; title/meta/ld+json untouched (verified: 2 lines changed per page in git diff).
 
 ---
 
@@ -88,3 +90,4 @@ One checkbox per page. **Depth note (R003):** case-study pages are TWO levels be
 | 2026-09-10 | Step 0 complete | 8 pages confirmed; GA inline snippet on all; gtag refs in index:779 + contact:34 (try/catch) |
 | 2026-09-10 | Step 1 complete | R001+R002 APPROVE; assets/js/cookie-consent.js shipped |
 | 2026-09-10 13:38 | Review R003 | plan Step 2: REVISE |
+| 2026-09-10 13:46 | Review R004 | plan Step 2: UNKNOWN |
