@@ -1,0 +1,13 @@
+# TP-007 — DONE (2026-09-11)
+
+All steps complete and verified.
+
+- Canonical on all 8 pages (3 case-study pages added, 404 added; 4 pre-existing)
+- Case-study titles: `«Brand» Case Study — Comtom Engineering` (Electric AI / Schonfeld / Todaytix)
+- og:title/og:description aligned; descriptions = outcome statements ≤160 chars
+- og:site_name on all 8 pages
+- 404.html noindex,follow + corrected stray homepage og tags
+- Descriptive alts: 3 case-study heroes + 3 index.html cards
+- sitemap.xml: lastmod 2026-09-11, 7/7 locs on disk, well-formed XML
+- html-validate: 33 errors = TP-006 baseline, 0 new
+- twitter:site intentionally not added (unverified handle) — see Technical Debt
