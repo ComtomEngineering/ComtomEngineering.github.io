@@ -126,6 +126,11 @@
     });
 
     document.body.appendChild(bar);
+
+    // Focus the Decline button on appearance: safe default per WCAG 2.4.3
+    // (banner is a non-modal bar, so focus does not trap the user).
+    var decline = bar.querySelector('[data-cookie-choice="declined"]');
+    if (decline) decline.focus();
   }
 
   function init() {
