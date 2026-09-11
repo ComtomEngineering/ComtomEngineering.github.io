@@ -13,3 +13,6 @@
 
 # Pi project-local packages (if using pi install -l)
 .pi/npm/
+
+# Node (Tailwind build tooling — TP-005)
+node_modules/
