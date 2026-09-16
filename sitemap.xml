@@ -6,7 +6,7 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://comtom.engineering/contact.html</loc>
+    <loc>https://comtom.engineering/contact</loc>
     <lastmod>2026-09-11</lastmod>
     <priority>0.80</priority>
   </url>
@@ -26,12 +26,12 @@
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://comtom.engineering/privacy.html</loc>
+    <loc>https://comtom.engineering/privacy</loc>
     <lastmod>2026-09-11</lastmod>
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://comtom.engineering/terms.html</loc>
+    <loc>https://comtom.engineering/terms</loc>
     <lastmod>2026-09-11</lastmod>
     <priority>0.30</priority>
   </url>
